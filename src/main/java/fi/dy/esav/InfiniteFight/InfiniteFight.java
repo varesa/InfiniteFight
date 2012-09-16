@@ -22,9 +22,6 @@ public class InfiniteFight extends JavaPlugin {
 				Event.Priority.Normal, this);
 		pm.registerEvent(Event.Type.ENTITY_DAMAGE, entityListener,
 				Event.Priority.Normal, this);
-		// pm.registerEvent(Event.Type.BLOCK_BREAK, BlockListener,
-		// Event.Priority.Normal, this);
-
 
 	}
 
