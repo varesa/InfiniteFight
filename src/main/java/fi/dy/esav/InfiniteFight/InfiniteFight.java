@@ -18,10 +18,11 @@ public class InfiniteFight extends JavaPlugin {
 				+ this.getDescription().getVersion() + " started.");
 
 		PluginManager pm = this.getServer().getPluginManager();
-		pm.registerEvent(Event.Type.ENTITY_DEATH, entityListener,
-				Event.Priority.Normal, this);
-		pm.registerEvent(Event.Type.ENTITY_DAMAGE, entityListener,
-				Event.Priority.Normal, this);
+		pm.registerEvents(entityListener, this);
+//		pm.registerEvent(Event.Type.ENTITY_DEATH, entityListener,
+//				Event.Priority.Normal, this);
+//		pm.registerEvent(Event.Type.ENTITY_DAMAGE, entityListener,
+//				Event.Priority.Normal, this);
 
 	}
 
