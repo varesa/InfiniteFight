@@ -37,6 +37,7 @@ public class InfiniteFight extends JavaPlugin {
 	}
 	
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
+		sender.sendMessage(String.valueOf(args.length));
 		if(args.length == 1) {
 			if(args[0] == "enable") {
 				if(enabled) {
