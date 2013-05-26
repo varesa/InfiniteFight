@@ -4,6 +4,7 @@ package fi.dy.esav.InfiniteFight;
 import java.util.Arrays;
 import java.util.List;
 
+import org.bukkit.entity.Animals;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -21,7 +22,7 @@ public class InfiniteFightEntityListener implements Listener {
 	@EventHandler(priority= EventPriority.NORMAL)
 	public void onEntityDeath(EntityDeathEvent e) {
 		if (	e.getEntity() instanceof LivingEntity &&
-				!(e.getEntity() instanceof Player) && 
+				!(e.getEntity() instanceof Player) && !(e.getEntity() instanceof Animals) &&
 				!(ignoredCauses.contains(e.getEntity().getLastDamageCause().getCause())) 
 			) {
 
