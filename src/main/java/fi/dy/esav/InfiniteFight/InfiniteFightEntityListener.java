@@ -16,7 +16,7 @@ public class InfiniteFightEntityListener implements Listener {
 	
 	static final List<DamageCause> ignoredCauses = Arrays.asList(DamageCause.DROWNING, DamageCause.FIRE, DamageCause.FIRE_TICK, DamageCause.LAVA, DamageCause.SUFFOCATION, DamageCause.VOID);
 	
-	int num = 1; // Debug, prevent explosions
+	int num = 3; // Debug, prevent explosions
 	
 	@EventHandler(priority= EventPriority.NORMAL)
 	public void onEntityDeath(EntityDeathEvent e) {
