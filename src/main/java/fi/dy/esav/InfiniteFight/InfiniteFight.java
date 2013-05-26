@@ -58,7 +58,10 @@ public class InfiniteFight extends JavaPlugin {
 				} else {
 					sender.sendMessage("InfiniteFight is disabled");
 				}
+			} else {
+				return false;
 			}
+			return true;
 		}
 		return false;
 	}
