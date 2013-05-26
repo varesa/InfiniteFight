@@ -15,7 +15,7 @@ public class InfiniteFightEntityListener implements Listener {
 	
 	@EventHandler(priority= EventPriority.NORMAL)
 	public void onEntityDeath(EntityDeathEvent e) {
-		if (e.getEntity() instanceof LivingEntity && !(e.getEntity() instanceof Player && !(e.getEntity().getLastDamageCause().getCause() == DamageCause.FIRE || e.getEntity().getLastDamageCause().getCause() == DamageCause.FIRE_TICK || e.getEntity().getLastDamageCause().getCause() == DamageCause.LAVA || e.getEntity().getLastDamageCause().getCause() == DamageCause.VOID))) {
+		if (e.getEntity() instanceof LivingEntity && !(e.getEntity() instanceof Player && !(e.getEntity().getLastDamageCause().getCause() == DamageCause.FIRE || e.getEntity().getLastDamageCause().getCause() == DamageCause.FIRE_TICK || e.getEntity().getLastDamageCause().getCause() == DamageCause.LAVA || e.getEntity().getLastDamageCause().getCause() == DamageCause.VOID || e.getEntity().getLastDamageCause().getCause() == DamageCause.SUFFOCATION))) {
 
 			for (int x=1;x<=num;x++) {
 				e.getEntity().getWorld().spawn(e.getEntity().getLocation(), e.getEntity().getClass());			
