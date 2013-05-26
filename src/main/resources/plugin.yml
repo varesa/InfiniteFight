@@ -1,3 +1,10 @@
 name: InfiniteFight
 main: fi.dy.esav.InfiniteFight.InfiniteFight
 version: 1.0
+
+commands:
+   if:
+      description: Enable/Disable IF.
+      aliases: infinitefight
+      usage: |
+         /<command> enable|disble|status

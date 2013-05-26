@@ -2,6 +2,8 @@ package fi.dy.esav.InfiniteFight;
 
 import java.util.logging.Logger;
 
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -30,6 +32,14 @@ public class InfiniteFight extends JavaPlugin {
 		log.info(this.getDescription().getName() + " version "
 				+ this.getDescription().getVersion() + " stopped.");
 
+	}
+	
+	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
+		for(String str : args) {
+			sender.sendMessage(str);
+			
+		}
+		return true;
 	}
 	
 }
