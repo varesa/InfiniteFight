@@ -37,23 +37,22 @@ public class InfiniteFight extends JavaPlugin {
 	}
 	
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
-		sender.sendMessage(String.valueOf(args.length));
 		if(args.length == 1) {
-			if(args[0] == "enable") {
+			if(args[0].equalsIgnoreCase("enable")) {
 				if(enabled) {
 					sender.sendMessage("InfiniteFight already enabled");
 				} else {
 					sender.sendMessage("Enabled InfiniteFight");
 					enabled = true;
 				}
-			} else if(args[0] == "disable") {
+			} else if(args[0].equalsIgnoreCase("disable")) {
 				if(!enabled) {
 					sender.sendMessage("InfiniteFight already disabled");
 				} else {
 					sender.sendMessage("Disabled InfiniteFight");
 					enabled = false;
 				}
-			} else if(args[0] == "status") {
+			} else if(args[0].equalsIgnoreCase("status")) {
 				if(enabled) {
 					sender.sendMessage("InfiniteFight is enabled");
 				} else {
