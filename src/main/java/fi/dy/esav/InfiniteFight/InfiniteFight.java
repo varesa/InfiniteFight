@@ -13,6 +13,8 @@ public class InfiniteFight extends JavaPlugin {
 
 	InfiniteFightEntityListener entityListener = new InfiniteFightEntityListener();
 	
+	static boolean enabled = false;
+	
 	public void onEnable() {
 
 		log.info(this.getDescription().getName() + " version "
@@ -35,11 +37,30 @@ public class InfiniteFight extends JavaPlugin {
 	}
 	
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
-		for(String str : args) {
-			sender.sendMessage(str);
-			
+		if(args.length == 1) {
+			if(args[0] == "enable") {
+				if(enabled) {
+					sender.sendMessage("InfiniteFight already enabled");
+				} else {
+					sender.sendMessage("Enabled InfiniteFight");
+					enabled = true;
+				}
+			} else if(args[0] == "disable") {
+				if(!enabled) {
+					sender.sendMessage("InfiniteFight already disabled");
+				} else {
+					sender.sendMessage("Disabled InfiniteFight");
+					enabled = false;
+				}
+			} else if(args[0] == "status") {
+				if(enabled) {
+					sender.sendMessage("InfiniteFight is enabled");
+				} else {
+					sender.sendMessage("InfiniteFight is disabled");
+				}
+			}
 		}
-		return true;
+		return false;
 	}
 	
 }

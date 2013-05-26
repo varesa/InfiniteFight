@@ -21,6 +21,8 @@ public class InfiniteFightEntityListener implements Listener {
 	
 	@EventHandler(priority= EventPriority.NORMAL)
 	public void onEntityDeath(EntityDeathEvent e) {
+		if(!InfiniteFight.enabled) { return; }
+		
 		if (	e.getEntity() instanceof LivingEntity &&
 				!(e.getEntity() instanceof Player) && !(e.getEntity() instanceof Animals) &&
 				!(ignoredCauses.contains(e.getEntity().getLastDamageCause().getCause())) 
